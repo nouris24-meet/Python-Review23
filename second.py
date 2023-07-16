@@ -12,11 +12,14 @@ def dislike(new_video):
 		
 def add_comment(youtubevideo, username, comment_text):
 	youtubevideo["comments"][username]= comment_text
-	retun youtubevideo 
+	return youtubevideo 
 
 example= create_youtube_video("cats","we love cats")
+print(example)
 like(example)
 dislike(example) 
 add_comment(example, "nour","wow")
+print(example)
 for i in range(495):
 	like(example)
+print(example)
