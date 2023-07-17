@@ -1,6 +1,14 @@
 def create_youtube_video(title, description):
-	new_video={"title":title, "description":description, "likes":0, "dislikes":0, "comments": {"username": ""}}
+	new_video={"title":title, "description":description, "likes":0, "dislikes":0, "comments": {"username": ""},"hashtag":["","","","",""]}
+	for i in range(5):
+		new_video["hashtag"][i]=input("Add a hashtag: ")
 	return new_video
+def similarity_to_video(video1,video2):
+	c=0
+	for i in range(5):
+		if video1["hashtag"][i] in video2["hashtag"]:
+			c+=1
+	return (c/5)*100
 def like(new_video):
 	if "likes" in new_video:
 		new_video["likes"]+=1
@@ -23,3 +31,6 @@ print(example)
 for i in range(495):
 	like(example)
 print(example)
+
+example2= create_youtube_video("hi","woho")
+print(similarity_to_video(example,example2))
