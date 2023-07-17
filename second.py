@@ -8,7 +8,7 @@ def similarity_to_video(video1,video2):
 	for i in range(5):
 		if video1["hashtag"][i] in video2["hashtag"]:
 			c+=1
-	return (c/5)*100
+	return str((c/5)*100) + "%"
 def like(new_video):
 	if "likes" in new_video:
 		new_video["likes"]+=1
