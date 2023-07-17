@@ -32,5 +32,5 @@ for i in range(495):
 	like(example)
 print(example)
 
-example2= create_youtube_video("hi","woho")
+example2= create_youtube_video("hi","wohooo")
 print(similarity_to_video(example,example2))
